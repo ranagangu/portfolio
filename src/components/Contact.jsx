@@ -9,7 +9,12 @@ export default function Contact({ personalInfo }) {
   });
   
   const [errors, setErrors] = useState({});
-  const [showToast, setShowToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState({
+    show: false,
+    message: '',
+    isError: false
+  });
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -25,8 +30,10 @@ export default function Contact({ personalInfo }) {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     let newErrors = {};
     let isValid = true;
 
@@ -55,18 +62,80 @@ export default function Contact({ personalInfo }) {
 
     if (!isValid) {
       setErrors(newErrors);
-    } else {
-      setErrors({});
-      setShowToast(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      return;
+    }
+
+    setErrors({});
+    setIsSubmitting(true);
+
+    try {
+      const email = personalInfo.email;
+      const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      
+      let response;
+      if (web3FormsKey) {
+        response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            access_key: web3FormsKey,
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            from_name: "Portfolio Contact Form"
+          })
+        });
+      } else {
+        response = await fetch(`https://formsubmit.co/ajax/${email}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            _subject: `Portfolio Contact: ${formData.subject}`
+          })
+        });
+      }
+
+      const result = await response.json();
+      const isSuccess = result.success === true || result.success === "true";
+
+      if (isSuccess) {
+        setToast({
+          show: true,
+          message: "Your message has been sent successfully!",
+          isError: false
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.message || "Failed to send the message.");
+      }
+    } catch (err) {
+      console.error("Contact Form Error:", err);
+      setToast({
+        show: true,
+        message: err.message || "There was an error sending your message. Please try again.",
+        isError: true
       });
+    } finally {
+      setIsSubmitting(false);
       setTimeout(() => {
-        setShowToast(false);
-      }, 4000);
+        setToast(prev => ({ ...prev, show: false }));
+      }, 5000);
     }
   };
 
@@ -193,17 +262,34 @@ export default function Contact({ personalInfo }) {
                   ></textarea>
                   <span className="invalid-feedback-custom">Please enter your message text.</span>
                 </div>
-                <button type="submit" className="btn-gradient w-100 py-3"><i className="fa-solid fa-paper-plane"></i> Send Message</button>
+                <button type="submit" className="btn-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Sending Message...
+                    </>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-paper-plane"></i> Send Message
+                    </>
+                  )}
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Success Toast */}
-      <div className={`toast-custom ${showToast ? 'show' : ''}`} id="success-toast">
-        <div className="toast-custom-icon"><i className="fa-solid fa-circle-check"></i></div>
-        <div className="toast-custom-msg">Your message has been sent successfully!</div>
+      {/* Toast Notification */}
+      <div 
+        className={`toast-custom ${toast.show ? 'show' : ''}`} 
+        id="toast-notification"
+        style={toast.isError ? { borderColor: '#ef4444', boxShadow: '0 0 15px rgba(239, 68, 68, 0.3)' } : {}}
+      >
+        <div className="toast-custom-icon" style={toast.isError ? { color: '#ef4444' } : {}}>
+          <i className={toast.isError ? "fa-solid fa-circle-xmark" : "fa-solid fa-circle-check"}></i>
+        </div>
+        <div className="toast-custom-msg">{toast.message}</div>
       </div>
     </section>
   );
