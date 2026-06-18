@@ -8,7 +8,7 @@ export const portfolioData = {
     title: "AI Trainer | Data Scientist | Python Developer",
     subtitle: "WELCOME TO MY PORTFOLIO",
     intro: "Passionate technologist driving AI integration and data literacy. I design advanced Python applications, analyze complex datasets, and empower corporate teams and students to build the next generation of intelligent systems.",
-    email: "[EMAIL_ADDRESS]",
+    email: "gangulydebpriya976@gmail.com",
     location: "Kolkata, India",
     linkedin: "https://www.linkedin.com/in/debpriya-ganguly/",
     github: "https://github.com/ranagangu",
