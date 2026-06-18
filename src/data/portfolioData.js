@@ -12,7 +12,7 @@ export const portfolioData = {
     location: "Kolkata, India",
     linkedin: "https://www.linkedin.com/in/debpriya-ganguly/",
     github: "https://github.com/ranagangu",
-    resumeUrl: "/assets/resume/Debpriya_Ganguly_Resume.pdf"
+    resumeUrl: "/assets/resume/debpriya_ganguly__exp_cv (2).pdf"
   },
 
   about: {
