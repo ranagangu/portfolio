@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1712" />
+      <stop offset="100%" stop-color="#050a08" />
+    </linearGradient>
+    <linearGradient id="glow-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff87" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#60efff" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad2)" />
+  
+  <!-- Isometric Grid Board -->
+  <g transform="translate(400, 260) scale(1, 0.58) rotate(45)">
+    <!-- Main board -->
+    <rect x="-180" y="-180" width="360" height="360" rx="10" fill="#142c1e" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+    
+    <!-- Grid Squares -->
+    <line x1="-180" y1="-90" x2="180" y2="-90" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <line x1="-180" y1="0" x2="180" y2="0" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <line x1="-180" y1="90" x2="180" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    
+    <line x1="-90" y1="-180" x2="-90" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <line x1="0" y1="-180" x2="0" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <line x1="90" y1="-180" x2="90" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    
+    <!-- Isometric Plants -->
+    <rect x="-160" y="-160" width="50" height="50" rx="8" fill="#1d4d30" opacity="0.8" />
+    <circle cx="-135" cy="-135" r="12" fill="url(#glow-green)" />
+    
+    <rect x="-70" y="-70" width="50" height="50" rx="8" fill="#1d4d30" opacity="0.8" />
+    <circle cx="-45" cy="-45" r="16" fill="url(#glow-green)" />
+    
+    <rect x="20" y="20" width="50" height="50" rx="8" fill="#1d4d30" opacity="0.8" />
+    <circle cx="45" cy="45" r="12" fill="url(#glow-green)" />
+    
+    <rect x="110" y="110" width="50" height="50" rx="8" fill="#1d4d30" opacity="0.8" />
+    <circle cx="135" cy="135" r="8" fill="url(#glow-green)" />
+  </g>
+
+  <!-- Title & Sim details -->
+  <text x="50" y="80" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">Farm Simulation Engine</text>
+  <text x="50" y="110" fill="#00ff87" font-family="'Space Grotesk', sans-serif" font-size="13">Python &amp; Flask DB Core</text>
+
+  <!-- Floating Stats Widget -->
+  <rect x="50" y="150" width="220" height="90" rx="10" fill="#142c1e" opacity="0.8" stroke="var(--glass-border)" />
+  <text x="70" y="180" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="12">Crop Growth Rate</text>
+  <text x="70" y="220" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="bold">+14.5% / hr</text>
+  
+  <rect x="530" y="80" width="220" height="90" rx="10" fill="#142c1e" opacity="0.8" stroke="var(--glass-border)" />
+  <text x="550" y="110" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="12">System Health Status</text>
+  <circle cx="560" cy="142" r="6" fill="#00ff87" />
+  <text x="575" y="146" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="13">Simulator Online</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150f1d" />
+      <stop offset="100%" stop-color="#0a0810" />
+    </linearGradient>
+    <linearGradient id="glow-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#da70d6" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad5)" />
+  
+  <rect x="50" y="50" width="700" height="400" rx="15" fill="#1c1629" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+  
+  <rect x="80" y="100" width="350" height="300" rx="8" fill="#241e33" />
+  <rect x="100" y="130" width="310" height="35" rx="5" fill="#8a2be2" opacity="0.15" />
+  <text x="115" y="152" fill="#da70d6" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">ARTICLE CONTENT SCANNED</text>
+  
+  <rect x="100" y="190" width="310" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+  <rect x="100" y="210" width="310" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+  <rect x="100" y="230" width="240" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+  <rect x="100" y="260" width="310" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+  <rect x="100" y="280" width="200" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+  
+  <rect x="100" y="320" width="100" height="18" rx="9" fill="#ef4444" opacity="0.2" />
+  <text x="115" y="333" fill="#ef4444" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold">Unverified Source</text>
+
+  <rect x="210" y="320" width="120" height="18" rx="9" fill="#ffb703" opacity="0.2" />
+  <text x="225" y="333" fill="#ffb703" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold">Clickbait Header</text>
+  
+  <rect x="460" y="100" width="260" height="300" rx="8" fill="#241e33" />
+  <text x="490" y="140" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold">NLP Model Insights</text>
+  
+  <circle cx="590" cy="230" r="60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="12" />
+  <path d="M 530 230 A 60 60 0 0 1 650 230" fill="none" stroke="#ef4444" stroke-width="12" stroke-linecap="round" />
+  
+  <text x="590" y="225" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="bold" text-anchor="middle">FAKE</text>
+  <text x="590" y="245" fill="#ef4444" font-family="'Space Grotesk', sans-serif" font-size="11" text-anchor="middle" font-weight="bold">92% CONFIDENCE</text>
+  
+  <text x="490" y="320" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11">Sarcasm Score: 87%</text>
+  <text x="490" y="345" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11">Sentiment: Negative</text>
+  <text x="490" y="370" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11">Entity Verification: Failed</text>
+
+  <text x="80" y="80" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">Fake News Detector</text>
+</svg>

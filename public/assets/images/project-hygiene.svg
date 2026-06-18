@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18150d" />
+      <stop offset="100%" stop-color="#0b0a06" />
+    </linearGradient>
+    <linearGradient id="glow-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb703" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fb8500" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad3)" />
+  
+  <!-- Food Safety and Analytics visual -->
+  <rect x="50" y="50" width="700" height="400" rx="15" fill="#201c13" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+  
+  <path d="M 100 100 C 200 150, 250 80, 400 120 C 500 150, 600 200, 700 160" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" />
+  <path d="M 120 400 C 240 350, 350 280, 480 320 C 580 350, 620 420, 680 390" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4" />
+  <path d="M 200 100 Q 180 250, 300 400" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" />
+  <path d="M 500 100 Q 550 250, 450 400" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" />
+  
+  <circle cx="280" cy="110" r="14" fill="url(#glow-orange)" />
+  <circle cx="280" cy="110" r="6" fill="#f8fafc" />
+  
+  <circle cx="430" cy="200" r="20" fill="url(#glow-orange)" opacity="0.6" />
+  <circle cx="430" cy="200" r="10" fill="url(#glow-orange)" />
+  <circle cx="430" cy="200" r="4" fill="#f8fafc" />
+  
+  <circle cx="580" cy="300" r="12" fill="url(#glow-orange)" />
+  <circle cx="580" cy="300" r="5" fill="#f8fafc" />
+  
+  <circle cx="210" cy="320" r="15" fill="#2ec4b6" opacity="0.6" />
+  <circle cx="210" cy="320" r="7" fill="#2ec4b6" />
+  
+  <!-- Analytics bar overlay -->
+  <rect x="80" y="150" width="160" height="180" rx="10" fill="#2d281a" stroke="rgba(255,255,255,0.04)" />
+  <text x="100" y="180" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold">Inspection Ratings</text>
+  
+  <!-- Mini Bar Chart -->
+  <rect x="100" y="270" width="20" height="40" rx="3" fill="#ffb703" />
+  <rect x="130" y="230" width="20" height="80" rx="3" fill="#ffb703" />
+  <rect x="160" y="210" width="20" height="100" rx="3" fill="#2ec4b6" />
+  <rect x="190" y="250" width="20" height="60" rx="3" fill="#ffb703" />
+
+  <text x="100" y="210" fill="#2ec4b6" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="bold">82.4%</text>
+  <text x="100" y="222" fill="#64748b" font-family="'Space Grotesk', sans-serif" font-size="9">PASS RATE</text>
+  
+  <text x="80" y="90" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">Food Hygiene Spatial Analytics</text>
+</svg>

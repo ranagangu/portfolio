@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a121d" />
+      <stop offset="100%" stop-color="#040810" />
+    </linearGradient>
+    <linearGradient id="glow-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad4)" />
+  
+  <rect x="50" y="50" width="700" height="400" rx="15" fill="#0f1a2b" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+  
+  <line x1="50" y1="150" x2="750" y2="150" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="50" y1="250" x2="750" y2="250" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="50" y1="350" x2="750" y2="350" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="225" y1="50" x2="225" y2="450" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="400" y1="50" x2="400" y2="450" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="575" y1="50" x2="575" y2="450" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+
+  <g transform="translate(400, 240) scale(1.4)" opacity="0.85">
+    <path d="M -10 -80 C -40 -80, -90 -40, -90 10 C -90 50, -50 70, -10 60 C -15 30, -15 -30, -10 -80 Z" fill="none" stroke="#00f2fe" stroke-width="3" />
+    <path d="M -10 -80 C -40 -80, -90 -40, -90 10 C -90 50, -50 70, -10 60 Z" fill="#00f2fe" opacity="0.05" />
+    
+    <path d="M 10 -80 C 40 -80, 90 -40, 90 10 C 90 50, 50 70, 10 60 C 15 30, 15 -30, 10 -80 Z" fill="none" stroke="#00f2fe" stroke-width="3" />
+    <path d="M 10 -80 C 40 -80, 90 -40, 90 10 C 90 50, 50 70, 10 60 Z" fill="#00f2fe" opacity="0.05" />
+    
+    <path d="M -10 -110 L 10 -110 L 10 -80 L -10 -80 Z" fill="none" stroke="#00f2fe" stroke-width="2" />
+    
+    <circle cx="-45" cy="15" r="15" fill="#ef4444" opacity="0.3" />
+    <circle cx="-45" cy="15" r="6" fill="#ef4444" />
+    <line x1="-45" y1="15" x2="-120" y2="45" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" />
+  </g>
+  
+  <rect x="70" y="270" width="180" height="110" rx="8" fill="#14243b" stroke="rgba(255,255,255,0.05)" />
+  <text x="90" y="300" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold">AI Detection Status</text>
+  <text x="90" y="335" fill="#ef4444" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">Nodule Found</text>
+  <text x="90" y="358" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="11">Confidence: 94.6%</text>
+
+  <text x="80" y="90" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">AI-Assisted Pulmonology diagnostic</text>
+  <text x="80" y="112" fill="#00f2fe" font-family="'Space Grotesk', sans-serif" font-size="12">Scikit-learn Deep Classifier</text>
+</svg>
