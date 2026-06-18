@@ -9,7 +9,7 @@ export const portfolioData = {
     subtitle: "WELCOME TO MY PORTFOLIO",
     intro: "Passionate technologist driving AI integration and data literacy. I design advanced Python applications, analyze complex datasets, and empower corporate teams and students to build the next generation of intelligent systems.",
     email: "gangulydebpriya976@gmail.com",
-    location: "Kolkata, India",
+    location: "Pune, Maharashtra, India",
     linkedin: "https://www.linkedin.com/in/debpriya-ganguly/",
     github: "https://github.com/ranagangu",
     resumeUrl: "/assets/resume/debpriya_ganguly__exp_cv (2).pdf"
